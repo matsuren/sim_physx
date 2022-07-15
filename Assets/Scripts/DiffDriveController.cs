@@ -180,7 +180,7 @@ public class DiffDriveController : MonoBehaviour
             uint secs = (uint)sim_time;
             uint nsecs = (uint)((sim_time % 1) * 1e9);
             odomMessage.header.frame_id = robotName + "_tf/odom";
-            odomMessage.header.stamp.sec = secs;
+            odomMessage.header.stamp.sec = (int)secs;
             odomMessage.header.stamp.nanosec = nsecs;
             odomMessage.child_frame_id = childFrameName;
 

@@ -38,7 +38,7 @@ public class GroundTruthPublisher : MonoBehaviour
             uint secs = (uint)sim_time;
             uint nsecs = (uint)((sim_time % 1) * 1e9);
             message.header.frame_id = "map";
-            message.header.stamp.sec = secs;
+            message.header.stamp.sec = (int)secs;
             message.header.stamp.nanosec = nsecs;
             message.child_frame_id = childFrameName;
 

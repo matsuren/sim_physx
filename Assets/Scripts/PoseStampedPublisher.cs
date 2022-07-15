@@ -42,7 +42,7 @@ public class PoseStampedPublisher : MonoBehaviour
             uint secs = (uint)sim_time;
             uint nsecs = (uint)((sim_time % 1) * 1e9);
             message.header.frame_id = "world";
-            message.header.stamp.sec = secs;
+            message.header.stamp.sec = (int)secs;
             message.header.stamp.nanosec = nsecs;
 
             // Unity -> ROS transformation
